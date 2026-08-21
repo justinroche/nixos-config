@@ -59,6 +59,8 @@
   };
   security.rtkit.enable = true;
 
+  security.pam.services.sddm.enableKwallet = true;
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
