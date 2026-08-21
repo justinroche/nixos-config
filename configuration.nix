@@ -73,6 +73,8 @@
   };
 
   programs.firefox.enable = true;
+  programs.ssh.startAgent = true;
+  programs.ssh.askPassword = "${pkgs.kdePackages.ksshaskpass}/bin/ksshaskpass";
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
