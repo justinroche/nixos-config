@@ -9,7 +9,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix # include the results of the hardware scan
-    <nixos-hardware/dell/xps/15-9500/nvidia>
   ];
 
   # Use the systemd-boot EFI boot loader.
