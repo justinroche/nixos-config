@@ -70,9 +70,12 @@
 
   programs.git = {
     enable = true;
-    settings.user = {
-      name = "Justin Roche";
-      email = "justinroche03@gmail.com";
+    settings = {
+      user = {
+        name = "Justin Roche";
+        email = "justinroche03@gmail.com";
+      };
+      core.editor = "vim";
     };
   };
 }
