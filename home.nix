@@ -68,14 +68,23 @@
     # EDITOR = "emacs";
   };
 
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Justin Roche";
-        email = "justinroche03@gmail.com";
+  programs = {
+    git = {
+      enable = true;
+      settings = {
+        user = {
+          name = "Justin Roche";
+          email = "justinroche03@gmail.com";
+        };
+        core.editor = "vim";
       };
-      core.editor = "vim";
+    };
+
+    bash = {
+      enable = true;
+      shellAliases = {
+        rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#justin-xps";
+      };
     };
   };
 }
