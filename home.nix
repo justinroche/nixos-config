@@ -5,11 +5,15 @@
 }: {
   home.stateVersion = "26.05"; # never change
 
-  home.packages = [];
+  home.packages = [
+    pkgs.nerd-fonts.jetbrains-mono
+  ];
 
   home.file = {};
 
-  home.sessionVariables = {};
+  home.sessionVariables = {
+    EDITOR = "vim";
+  };
 
   programs = {
     git = {
