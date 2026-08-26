@@ -13,6 +13,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 1;
 
+  # Nix
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+  nix.settings.auto-optimise-store = true;
+
   # Network
   networking.hostName = "justin-xps";
   networking.networkmanager.enable = true;
