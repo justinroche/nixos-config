@@ -31,7 +31,7 @@
 
     kitty = {
       enable = true;
-      themeFile = "Tokyo Night";
+      themeFile = "tokyo_night_night";
       font = {
         name = "JetBrainsMono Nerd Font";
         size = 12;
