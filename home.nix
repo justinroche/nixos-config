@@ -7,6 +7,7 @@
 
   home.packages = [
     pkgs.nerd-fonts.jetbrains-mono
+    pkgs.xclip
   ];
 
   home.file = {};
@@ -48,8 +49,12 @@
     tmux = {
       enable = true;
       terminal = "tmux-256color";
+      keyMode = "vi";
+      prefix = "C-Space";
       plugins = with pkgs.tmuxPlugins; [
         sensible
+        vim-tmux-navigator
+        yank
         {
           plugin = tokyo-night-tmux;
           extraConfig = ''
@@ -63,6 +68,15 @@
       ];
       extraConfig = ''
         set-option -sa terminal-overrides ",xterm*:Tc"
+        set -g set-clipboard on
+
+        bind h select-pane -L
+        bind j select-pane -D
+        bind k select-pane -U
+        bind l select-pane -R
+
+        bind-key -T copy-mode-vi v send-keys -X begin-selection
+        bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
       '';
     };
 
