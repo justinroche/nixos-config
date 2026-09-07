@@ -49,6 +49,12 @@
   };
   security.rtkit.enable = true; # required for PipeWire's realtime scheduling
 
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
   # Users
   users.users.justin = {
     isNormalUser = true;
