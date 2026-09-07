@@ -91,7 +91,7 @@
       };
       initContent = ''
         if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-          tmux attach -t default || tmux new -s default
+          tmux new-session \; set-option destroy-unattached
         fi
       '';
       initExtra = ''
