@@ -19,7 +19,12 @@
     dates = "weekly";
     options = "--delete-older-than 14d";
   };
-  nix.settings.auto-optimise-store = true;
+  nix.settings = {
+    auto-optimise-store = true;
+    trusted-users = ["root" "justin"];
+    substituters = ["https://cachix.org"];
+    trusted-public-keys = ["devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="];
+  };
 
   # Network
   networking.hostName = "justin-xps";
@@ -69,6 +74,7 @@
   # Programs
   programs.firefox.enable = true;
   programs.zsh.enable = true;
+  programs.nix-ld.enable = true;
 
   # Packages
   environment.systemPackages = with pkgs; [

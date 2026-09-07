@@ -8,6 +8,8 @@
   home.packages = [
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.xclip
+
+    pkgs.devenv
   ];
 
   home.file = {};
@@ -91,6 +93,9 @@
         if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
           tmux attach -t default || tmux new -s default
         fi
+      '';
+      initExtra = ''
+        eval "$(devenv hook zsh)"
       '';
     };
   };
