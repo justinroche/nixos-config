@@ -1,6 +1,7 @@
 {
   config,
   pkgs,
+  lib,
   ...
 }: {
   home.stateVersion = "26.05"; # never change
@@ -89,14 +90,12 @@
       shellAliases = {
         rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#justin-xps";
       };
-      initContent = ''
-        if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-          tmux new-session \; set-option destroy-unattached
-        fi
-      '';
-      initExtra = ''
-        eval "$(devenv hook zsh)"
-      '';
+
+      initContent = lib.concatStringsSep "\n" [
+        (builtins.readFile ./zsh/tmux-autostart.zsh)
+        (builtins.readFile ./zsh/transient-prompt.zsh)
+        (builtins.readFile ./zsh/devenv-hook.zsh)
+      ];
     };
   };
 }
