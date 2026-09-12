@@ -40,6 +40,9 @@
         name = "JetBrainsMono Nerd Font";
         size = 12;
       };
+      settings = {
+        cursor_shape = "beam";
+      };
     };
 
     starship = {
