@@ -100,5 +100,10 @@
         (builtins.readFile ./zsh/devenv-hook.zsh)
       ];
     };
+
+    zoxide = {
+      enable = true;
+      enableZshIntegration = true;
+    };
   };
 }
