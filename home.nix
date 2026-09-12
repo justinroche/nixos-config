@@ -22,6 +22,11 @@
   programs = {
     bash.enable = true;
 
+    fd = {
+      enable = true;
+      hidden = true;
+    };
+
     git = {
       enable = true;
       settings = {
