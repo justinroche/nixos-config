@@ -9,9 +9,26 @@
   ];
 
   # Boot
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.systemd-boot.configurationLimit = 1;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      gfxmodeEfi = "1920x1200";
+      useOSProber = true;
+      configurationLimit = 10;
+    };
+  };
+  catppuccin = {
+    enable = true;
+    autoEnable = true;
+    grub.enable = true;
+    grub.flavor = "mocha";
+  };
 
   # Nix
   nix.gc = {
