@@ -23,11 +23,18 @@
       configurationLimit = 10;
     };
   };
+  boot.plymouth.enable = true;
+  boot.consoleLogLevel = 3;
+  boot.initrd.verbose = false;
+  boot.kernelParams = ["quiet" "rd.udev.log_level=3" "rd.systemd.show_status=auto"];
+
   catppuccin = {
     enable = true;
     autoEnable = true;
     grub.enable = true;
     grub.flavor = "mocha";
+    plymouth.enable = true;
+    plymouth.flavor = "mocha";
   };
 
   # Nix
