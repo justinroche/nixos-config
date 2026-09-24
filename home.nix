@@ -7,10 +7,10 @@
   home.stateVersion = "26.05"; # never change
 
   home.packages = [
-    pkgs.nerd-fonts.jetbrains-mono
-    pkgs.xclip
-
     pkgs.devenv
+    pkgs.nerd-fonts.jetbrains-mono
+    pkgs.glow
+    pkgs.xclip
   ];
 
   home.file = {};
@@ -97,6 +97,8 @@
 
         bind-key -T copy-mode-vi v send-keys -X begin-selection
         bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+        bind-key "?" display-popup -E -w 90% -h 90% "glow -p ~/nixos-config/docs/cheatsheet.md"
       '';
     };
 
