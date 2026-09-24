@@ -31,6 +31,7 @@
   catppuccin = {
     enable = true;
     autoEnable = true;
+    cache.enable = true;
     grub.enable = true;
     grub.flavor = "mocha";
     plymouth.enable = true;
