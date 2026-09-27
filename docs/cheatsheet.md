@@ -19,6 +19,7 @@
 - top: `gg`, bottom: `G`
 - ln start: `0`, end: `$`
 - join next line: `J`
+- find replace: `:%s/{}/{}/g`
 
 # fd
 
