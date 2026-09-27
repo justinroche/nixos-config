@@ -77,29 +77,13 @@
         yank
         {
           plugin = tokyo-night-tmux;
-          extraConfig = ''
-            set -g @tokyo-night-tmux_show_datetime 0
-            set -g @tokyo-night-tmux_show_path 1
-            set -g @tokyo-night-tmux_path_format relative
-            set -g @tokyo-night-tmux_window_id_style dsquare
-            set -g @tokyo-night-tmux_show_git 0
-          '';
+          extraConfig = builtins.readFile ./tmux/tokyo-night.conf;
         }
       ];
-      extraConfig = ''
-        set-option -sa terminal-overrides ",xterm*:Tc"
-        set -g set-clipboard on
-
-        bind h select-pane -L
-        bind j select-pane -D
-        bind k select-pane -U
-        bind l select-pane -R
-
-        bind-key -T copy-mode-vi v send-keys -X begin-selection
-        bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
-
-        bind-key "?" display-popup -E -w 90% -h 90% "glow -p ~/nixos-config/docs/cheatsheet.md"
-      '';
+      extraConfig = lib.concatStringsSep "\n" [
+        (builtins.readFile ./tmux/settings.conf)
+        (builtins.readFile ./tmux/keybindings.conf)
+      ];
     };
 
     zsh = {
