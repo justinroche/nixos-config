@@ -11,6 +11,7 @@
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.glow
     pkgs.xclip
+    pkgs.kdePackages.krdc
   ];
 
   home.file = {};
