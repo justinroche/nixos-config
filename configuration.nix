@@ -105,7 +105,6 @@
   environment.systemPackages = with pkgs; [
     alejandra
     curl
-    vim
     vscode
     wget
   ];
