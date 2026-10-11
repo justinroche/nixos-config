@@ -13,6 +13,7 @@
     pkgs.xclip
     pkgs.kdePackages.krdc
     pkgs.codex
+    pkgs.lazygit
   ];
 
   home.file = {};
