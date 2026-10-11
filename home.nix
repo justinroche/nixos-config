@@ -6,14 +6,14 @@
 }: {
   home.stateVersion = "26.05"; # never change
 
-  home.packages = [
-    pkgs.devenv
-    pkgs.nerd-fonts.jetbrains-mono
-    pkgs.glow
-    pkgs.xclip
-    pkgs.kdePackages.krdc
-    pkgs.codex
-    pkgs.lazygit
+  home.packages = with pkgs; [
+    devenv
+    nerd-fonts.jetbrains-mono
+    glow
+    xclip
+    kdePackages.krdc
+    codex
+    lazygit
   ];
 
   home.file = {};
