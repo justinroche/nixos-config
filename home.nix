@@ -12,6 +12,7 @@
     pkgs.glow
     pkgs.xclip
     pkgs.kdePackages.krdc
+    pkgs.codex
   ];
 
   home.file = {};
