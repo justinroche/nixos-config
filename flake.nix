@@ -10,6 +10,8 @@
 
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    nixvim.url = "github:nix-community/nixvim/nixos-26.05";
   };
 
   outputs = {
@@ -18,6 +20,7 @@
     nixos-hardware,
     catppuccin,
     home-manager,
+    nixvim,
     ...
   }: {
     nixosConfigurations.justin-xps = nixpkgs.lib.nixosSystem {
@@ -31,7 +34,12 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.justin = import ./home.nix;
+          home-manager.users.justin = {
+            imports = [
+              nixvim.homeModules.nixvim
+              ./home.nix
+            ];
+          };
         }
       ];
     };

@@ -17,7 +17,7 @@
   home.file = {};
 
   home.sessionVariables = {
-    EDITOR = "vim";
+    EDITOR = "nvim";
   };
 
   programs = {
@@ -35,7 +35,7 @@
           name = "Justin Roche";
           email = "justinroche03@gmail.com";
         };
-        core.editor = "vim";
+        core.editor = "nvim";
       };
     };
 
@@ -49,6 +49,15 @@
       settings = {
         cursor_shape = "beam";
       };
+    };
+
+    nixvim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+      vimdiffAlias = true;
+      imports = [./nvim];
     };
 
     ripgrep = {

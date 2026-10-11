@@ -1,3 +1,8 @@
+set_cursor_beam() {
+  printf '\e[6 q'
+}
+precmd_functions+=(set_cursor_beam)
+
 zle-line-init() {
   emulate -L zsh
 
