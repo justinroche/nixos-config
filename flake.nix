@@ -11,6 +11,12 @@
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
+
     nixvim.url = "github:nix-community/nixvim/nixos-26.05";
   };
 
@@ -20,6 +26,7 @@
     nixos-hardware,
     catppuccin,
     home-manager,
+    plasma-manager,
     nixvim,
     ...
   }: {
@@ -37,6 +44,7 @@
           home-manager.users.justin = {
             imports = [
               nixvim.homeModules.nixvim
+              plasma-manager.homeModules.plasma-manager
               ./home.nix
             ];
           };

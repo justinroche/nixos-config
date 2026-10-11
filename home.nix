@@ -63,6 +63,27 @@
       imports = [./nvim];
     };
 
+    plasma = {
+      enable = true;
+      panels = [
+        {
+          location = "bottom";
+          widgets = [
+            {kickoff = {};}
+            "org.kde.plasma.pager"
+            {
+              iconTasks.launchers = [
+                "preferred://browser"
+                "preferred://filemanager"
+                "applications:code.desktop"
+                "applications:kitty.desktop"
+              ];
+            }
+          ];
+        }
+      ];
+    };
+
     ripgrep = {
       enable = true;
       arguments = [
