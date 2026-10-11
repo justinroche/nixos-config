@@ -2,6 +2,7 @@
   globals.mapleader = " ";
 
   opts = {
+    clipboard = "unnamedplus";
     cursorline = true;
     expandtab = true;
     guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr:hor20,o:hor50";

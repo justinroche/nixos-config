@@ -11,6 +11,7 @@
     nerd-fonts.jetbrains-mono
     glow
     xclip
+    wl-clipboard
     kdePackages.krdc
     codex
     lazygit
