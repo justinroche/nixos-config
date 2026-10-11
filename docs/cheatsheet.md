@@ -12,14 +12,24 @@
 - swap behind: `{`, swap ahead: `}`
 - close: `x`
 
-# vim
+# nvim
 
 - yank line: `yy`, chg word: `cw`, del char: `x`
 - newl below: `o`, above: `O`
 - top: `gg`, bottom: `G`
 - ln start: `0`, end: `$`
+- down: `ctrl+d`, up: `ctrl+u`
 - join next line: `J`
+- find: `/{}`, previous: `N`, next: `n`
 - find replace: `:%s/{}/{}/g`
+- browse: ` -`
+- windows: `ctrl+w`
+
+# yazi
+
+- open file: `↵`, close: `q`
+- open right: `ctrl+v`, below: `ctrl+x`, tab: `ctrl+t`
+- help: `F1`
 
 # fd
 
