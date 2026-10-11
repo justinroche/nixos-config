@@ -54,6 +54,13 @@
     };
     web-devicons.enable = true;
     which-key.enable = true;
+    yazi = {
+      enable = true;
+      settings = {
+        floating_window_scaling_factor = 0.9;
+        yazi_floating_window_border = "rounded";
+      };
+    };
   };
 
   keymaps = [
@@ -63,6 +70,24 @@
       action = "<cmd>nohlsearch<CR>";
       options = {
         desc = "Clear search highlight";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>-";
+      action = "<cmd>Yazi<CR>";
+      options = {
+        desc = "Browse from current file";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>cw";
+      action = "<cmd>Yazi cwd<CR>";
+      options = {
+        desc = "Browse project directory";
         silent = true;
       };
     }
