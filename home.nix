@@ -83,6 +83,29 @@
                 "applications:kitty.desktop"
               ];
             }
+            {
+              plasmaPanelColorizer = {
+                general = {
+                  enable = true;
+                  hideWidget = true;
+                };
+                settings.General.globalSettings = builtins.toJSON {
+                  panel.normal = {
+                    enabled = true;
+                    backgroundColor = {
+                      enabled = true;
+                      custom = "#391A09";
+                      sourceType = 0;
+                      alpha = 1.0;
+                    };
+                  };
+                  nativePanel.background = {
+                    enabled = false;
+                    shadow = false;
+                  };
+                };
+              };
+            }
             "org.kde.plasma.systemtray"
             "org.kde.plasma.digitalclock"
           ];
