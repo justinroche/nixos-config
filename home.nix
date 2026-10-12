@@ -65,6 +65,10 @@
 
     plasma = {
       enable = true;
+      workspace.wallpaperSlideShow = {
+        path = "${config.home.homeDirectory}/Pictures/fall wallpapers";
+        interval = 1800;
+      };
       panels = [
         {
           location = "bottom";
