@@ -18,6 +18,11 @@
     };
 
     nixvim.url = "github:nix-community/nixvim/nixos-26.05";
+
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -28,6 +33,7 @@
     home-manager,
     plasma-manager,
     nixvim,
+    sops-nix,
     ...
   }: {
     nixosConfigurations.justin-xps = nixpkgs.lib.nixosSystem {
@@ -36,6 +42,7 @@
         ./configuration.nix
         nixos-hardware.nixosModules.dell-xps-15-9500-nvidia
         catppuccin.nixosModules.catppuccin
+        sops-nix.nixosModules.sops
 
         home-manager.nixosModules.home-manager
         {

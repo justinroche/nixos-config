@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -46,6 +50,12 @@
     trusted-public-keys = ["devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="];
   };
 
+  sops = {
+    defaultSopsFile = ./secrets/users.yaml;
+    age.keyFile = "/home/justin/.config/sops/age/keys.txt";
+    secrets.justin-password.neededForUsers = true;
+  };
+
   # Network
   networking.hostName = "justin-xps";
   networking.networkmanager.enable = true;
@@ -84,7 +94,7 @@
   users.users.justin = {
     isNormalUser = true;
     extraGroups = ["wheel" "networkmanager"]; # wheel = sudo access
-    hashedPassword = "$6$FkRwt5YayAU6dVxB$J3XED4v/0gVsDZXyy36bUz.lTTHKo5Wh6LpItGvdz9gNBrPynAd3R4UgatFeR7z5TaBvCoL2lHjTCsXlAbezh/";
+    hashedPasswordFile = config.sops.secrets.justin-password.path;
     shell = pkgs.zsh;
   };
 
