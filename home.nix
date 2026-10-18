@@ -7,17 +7,20 @@
   home.stateVersion = "26.05"; # never change
 
   home.packages = with pkgs; [
-    devenv
-    nerd-fonts.jetbrains-mono
-    glow
-    xclip
-    wl-clipboard
-    kdePackages.krdc
+    alejandra
     codex
+    curl
+    devenv
+    glow
+    kdePackages.krdc
     lazygit
+    nerd-fonts.jetbrains-mono
+    tree
+    vscode
+    wget
+    wl-clipboard
+    xclip
   ];
-
-  home.file = {};
 
   home.sessionVariables = {
     EDITOR = "nvim";

@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }: {
@@ -91,23 +89,12 @@
     extraGroups = ["wheel" "networkmanager"]; # wheel = sudo access
     hashedPassword = "$6$FkRwt5YayAU6dVxB$J3XED4v/0gVsDZXyy36bUz.lTTHKo5Wh6LpItGvdz9gNBrPynAd3R4UgatFeR7z5TaBvCoL2lHjTCsXlAbezh/";
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      tree
-    ];
   };
 
   # Programs
   programs.firefox.enable = true;
   programs.zsh.enable = true;
   programs.nix-ld.enable = true;
-
-  # Packages
-  environment.systemPackages = with pkgs; [
-    alejandra
-    curl
-    vscode
-    wget
-  ];
 
   system.stateVersion = "26.05"; # never change
 }
