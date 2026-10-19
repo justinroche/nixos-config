@@ -40,3 +40,8 @@
 
 - case-insensitive: `-i`, whole word: `-w`, glob: `-g`
 - no preview: `-l`
+
+# flakes
+
+- validate: `nix flake check`
+- update input: `nix flake update <input>`, apply: `rebuild`
