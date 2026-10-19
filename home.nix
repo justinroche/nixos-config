@@ -1,9 +1,12 @@
 {
-  config,
   pkgs,
   lib,
   ...
 }: {
+  imports = [
+    ./plasma
+  ];
+
   home.stateVersion = "26.05"; # never change
 
   home.packages = with pkgs; [
@@ -64,56 +67,6 @@
       vimAlias = true;
       vimdiffAlias = true;
       imports = [./nvim];
-    };
-
-    plasma = {
-      enable = true;
-      workspace.wallpaperSlideShow = {
-        path = "${config.home.homeDirectory}/Pictures/fall wallpapers";
-        interval = 1800;
-      };
-      panels = [
-        {
-          location = "bottom";
-          widgets = [
-            {kickoff = {};}
-            "org.kde.plasma.pager"
-            {
-              iconTasks.launchers = [
-                "preferred://browser"
-                "preferred://filemanager"
-                "applications:code.desktop"
-                "applications:kitty.desktop"
-              ];
-            }
-            {
-              plasmaPanelColorizer = {
-                general = {
-                  enable = true;
-                  hideWidget = true;
-                };
-                settings.General.globalSettings = builtins.toJSON {
-                  panel.normal = {
-                    enabled = true;
-                    backgroundColor = {
-                      enabled = true;
-                      custom = "#391A09";
-                      sourceType = 0;
-                      alpha = 1.0;
-                    };
-                  };
-                  nativePanel.background = {
-                    enabled = false;
-                    shadow = false;
-                  };
-                };
-              };
-            }
-            "org.kde.plasma.systemtray"
-            "org.kde.plasma.digitalclock"
-          ];
-        }
-      ];
     };
 
     ripgrep = {
