@@ -18,6 +18,7 @@
     kdePackages.krdc
     lazygit
     nerd-fonts.jetbrains-mono
+    plexamp
     tree
     vscode
     wget
