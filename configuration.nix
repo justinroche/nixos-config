@@ -36,6 +36,7 @@
     grub.flavor = "mocha";
     plymouth.enable = true;
     plymouth.flavor = "mocha";
+    sddm.enable = false;
   };
 
   # Nix
