@@ -30,6 +30,16 @@
     EDITOR = "nvim";
   };
 
+  home.file.".local/share/sounds/PS5" = {
+    source = pkgs.fetchFromGitHub {
+      owner = "DAK404";
+      repo = "PS5-Plasma-Soundtheme";
+      rev = "a83644caf74b5212dbcf536366a1cca4058e5f00";
+      hash = "sha256-blPkwN5CZD/1dnc3BD1o/tMAg1p1jlwUJ8HinZVpDng=";
+    };
+    recursive = true;
+  };
+
   programs = {
     bash.enable = true;
 
