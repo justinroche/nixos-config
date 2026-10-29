@@ -24,6 +24,7 @@
     wget
     wl-clipboard
     xclip
+    (writeShellScriptBin "tdev" (builtins.readFile ./tmux/default-session.sh))
   ];
 
   home.sessionVariables = {
