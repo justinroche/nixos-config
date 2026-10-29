@@ -4,6 +4,31 @@ in {
   programs.plasma = {
     enable = true;
     configFile.kdeglobals.Sounds.Theme = "PS5";
+    # Window placement is handled by KZones, rather than a Kitty-only rule.
+    configFile.kwinrulesrc.General = {
+      count = 0;
+      rules = "";
+    };
+    configFile.kwinrc = {
+      Plugins = {
+        kzonesEnabled = true;
+        tileseditorEnabled = false;
+      };
+      "Script-kzones" = {
+        enableZoneOverlay = true;
+        rememberWindowGeometries = true;
+        layoutsJson = {
+          escapeValue = false;
+          value = builtins.toJSON [
+            {
+              name = "Centered";
+              padding = 4;
+              zones = [settings.zones.centered];
+            }
+          ];
+        };
+      };
+    };
     workspace.wallpaperSlideShow = {
       path = "${config.home.homeDirectory}/${settings.wallpaper.directory}";
       interval = settings.wallpaper.interval;

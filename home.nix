@@ -15,6 +15,7 @@
     curl
     devenv
     glow
+    kdePackages.kzones
     kdePackages.krdc
     lazygit
     nerd-fonts.jetbrains-mono

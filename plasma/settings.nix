@@ -13,4 +13,11 @@
     ];
     color = "#391A09";
   };
+
+  zones.centered = {
+    x = 6;
+    y = 7;
+    width = 88;
+    height = 86;
+  };
 }
