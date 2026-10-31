@@ -41,6 +41,15 @@
         };
       };
     };
+    bufferline = {
+      enable = true;
+      settings.options = {
+        always_show_bufferline = true;
+        diagnostics = "nvim_lsp";
+        modified_icon = "●";
+        separator_style = "slant";
+      };
+    };
     gitsigns.enable = true;
     lualine.enable = true;
     nvim-surround.enable = true;
@@ -71,6 +80,42 @@
       action = "<cmd>nohlsearch<CR>";
       options = {
         desc = "Clear search highlight";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-h>";
+      action = "<cmd>BufferLineCyclePrev<CR>";
+      options = {
+        desc = "Previous buffer";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-l>";
+      action = "<cmd>BufferLineCycleNext<CR>";
+      options = {
+        desc = "Next buffer";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = "<cmd>bdelete<CR>";
+      options = {
+        desc = "Close buffer";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>bD";
+      action = "<cmd>%bdelete|enew<CR>";
+      options = {
+        desc = "Close all buffers";
         silent = true;
       };
     }
