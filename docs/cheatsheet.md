@@ -8,7 +8,7 @@
 ## panes
 
 - new below: `"`, new right: `%`
-- nav: `arrows`, cycle: `o`
+- nav: `←↓↑→`, cycle: `o`
 - swap behind: `{`, swap ahead: `}`
 - close: `x`
 
@@ -18,19 +18,19 @@
 - newl below: `o`, above: `O`
 - top: `gg`, bottom: `G`
 - ln start: `0`, end: `$`
-- down: `ctrl+d`, up: `ctrl+u`
+- down: `⌃d`, up: `⌃u`
 - join next line: `J`
-- find: `/{}`, previous: `N`, next: `n`
-- find replace: `:%s/{}/{}/g`
-- files: `space f f`, grep: `space f g`, open: `space f b`
-- buffers: prev `shift+h`, next `shift+l`, close `space b d`, all `space b D`
-- browse: `space -`, project: `space c w`
-- windows: `ctrl+w`, then `h/j/k/l`
+- find: `/…`, previous: `N`, next: `n`
+- find replace: `:%s/…/…/g`
+- files: ` ff`, grep: ` fg`, open: ` fb`
+- buffers: prev `⇧h`, next `⇧l`, close ` bd`, all ` b⇧d`
+- browse: ` -`, project: ` cw`
+- windows: `⌃w h/j/k/l`
 
 # yazi
 
 - open file: `↵`, close: `q`
-- open right: `ctrl+v`, below: `ctrl+x`, tab: `ctrl+t`
+- open right: `⌃v`, below: `⌃x`, tab: `⌃t`
 - help: `F1`
 
 # fd
