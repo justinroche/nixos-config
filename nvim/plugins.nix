@@ -1,12 +1,30 @@
 {...}: {
   plugins = {
+    blink-cmp = {
+      enable = true;
+      setupLspCapabilities = true;
+      settings.completion.documentation.auto_show = true;
+    };
     comment.enable = true;
     conform-nvim = {
       enable = true;
       settings = {
         formatters_by_ft = {
+          css = ["prettier"];
+          html = ["prettier"];
+          javascript = ["prettier"];
+          javascriptreact = ["prettier"];
+          json = ["prettier"];
+          jsonc = ["prettier"];
+          markdown = ["prettier"];
           nix = ["alejandra"];
+          rust = ["rustfmt"];
+          typescript = ["prettier"];
+          typescriptreact = ["prettier"];
+          vue = ["prettier"];
+          yaml = ["prettier"];
         };
+        formatters.prettier.prepend_args = ["--single-quote"];
         format_on_save = {
           timeout_ms = 500;
           lsp_format = "fallback";
@@ -24,6 +42,47 @@
     };
     gitsigns.enable = true;
     lualine.enable = true;
+    lsp = {
+      enable = true;
+      keymaps = {
+        diagnostic = {
+          "[d" = "goto_prev";
+          "]d" = "goto_next";
+        };
+        lspBuf = {
+          "<leader>ca" = "code_action";
+          "<leader>rn" = "rename";
+          "gD" = "declaration";
+          "gd" = "definition";
+          "gi" = "implementation";
+          "gr" = "references";
+          "K" = "hover";
+        };
+      };
+      servers = {
+        cssls.enable = true;
+        emmet_ls.enable = true;
+        html.enable = true;
+        jsonls.enable = true;
+        rust_analyzer = {
+          enable = true;
+          installCargo = false;
+          installRustc = false;
+          settings = {
+            imports = {
+              granularity.group = "module";
+              merge.glob = false;
+            };
+            inlayHints = {
+              chainingHints.enable = false;
+              closingBraceHints.enable = false;
+            };
+          };
+        };
+        ts_ls.enable = true;
+        vue_ls.enable = true;
+      };
+    };
     nvim-surround.enable = true;
     telescope = {
       enable = true;

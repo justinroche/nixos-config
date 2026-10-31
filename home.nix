@@ -20,6 +20,10 @@
     lazygit
     nerd-fonts.jetbrains-mono
     plexamp
+    prettier
+    cargo
+    rustc
+    rustfmt
     tree
     vscode
     wget
