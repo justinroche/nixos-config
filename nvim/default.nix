@@ -55,6 +55,10 @@
     nvim-surround.enable = true;
     telescope = {
       enable = true;
+      settings.pickers = {
+        find_files.hidden = true;
+        live_grep.hidden = true;
+      };
       keymaps = {
         "<leader>ff" = "find_files";
         "<leader>fg" = "live_grep";
