@@ -22,8 +22,10 @@
 - join next line: `J`
 - find: `/{}`, previous: `N`, next: `n`
 - find replace: `:%s/{}/{}/g`
-- browse: ` -`
-- windows: `ctrl+w`
+- files: `space f f`, grep: `space f g`, open: `space f b`
+- buffers: prev `shift+h`, next `shift+l`, close `space b d`, all `space b D`
+- browse: `space -`, project: `space c w`
+- windows: `ctrl+w`, then `h/j/k/l`
 
 # yazi
 
