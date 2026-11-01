@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgsUnstable,
   lib,
   ...
 }: {
@@ -13,7 +14,7 @@
     alejandra
     codex
     curl
-    devenv
+    pkgsUnstable.devenv
     glow
     kdePackages.kzones
     kdePackages.krdc
