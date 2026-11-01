@@ -66,9 +66,9 @@
     {
       mode = "n";
       key = "<leader>bD";
-      action = "<cmd>%bdelete|enew<CR>";
+      action = "<cmd>bdelete!<CR>";
       options = {
-        desc = "Close all buffers";
+        desc = "Close buffer without saving";
         silent = true;
       };
     }
