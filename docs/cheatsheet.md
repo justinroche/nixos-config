@@ -16,9 +16,6 @@
 
 - yank line: `yy`, chg word: `cw`, del char: `x`
 - newl below: `o`, above: `O`
-- top: `gg`, bottom: `G`
-- ln start: `0`, end: `$`
-- down: `⌃d`, up: `⌃u`
 - join next line: `J`
 - find: `/…`, previous: `N`, next: `n`
 - find replace: `:%s/…/…/g`
@@ -32,7 +29,6 @@
 
 # yazi
 
-- open file: `↵`, close: `q`
 - open right: `⌃v`, below: `⌃x`, tab: `⌃t`
 - help: `F1`
 
