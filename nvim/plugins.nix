@@ -45,10 +45,6 @@
     lsp = {
       enable = true;
       keymaps = {
-        diagnostic = {
-          "[d" = "goto_prev";
-          "]d" = "goto_next";
-        };
         lspBuf = {
           "<leader>ca" = "code_action";
           "<leader>rn" = "rename";
@@ -64,6 +60,7 @@
         emmet_ls.enable = true;
         html.enable = true;
         jsonls.enable = true;
+        nixd.enable = true;
         rust_analyzer = {
           enable = true;
           installCargo = false;

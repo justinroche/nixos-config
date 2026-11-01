@@ -11,6 +11,33 @@
     }
     {
       mode = "n";
+      key = "<leader>e";
+      action = "<cmd>lua vim.diagnostic.open_float({ scope = 'buffer' })<CR>";
+      options = {
+        desc = "Open buffer diagnostics";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "[d";
+      action = "<cmd>lua vim.diagnostic.goto_prev()<CR>";
+      options = {
+        desc = "Previous diagnostic";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
+      key = "]d";
+      action = "<cmd>lua vim.diagnostic.goto_next()<CR>";
+      options = {
+        desc = "Next diagnostic";
+        silent = true;
+      };
+    }
+    {
+      mode = "n";
       key = "<S-h>";
       action = "<cmd>BufferLineCyclePrev<CR>";
       options = {

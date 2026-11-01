@@ -23,6 +23,7 @@
 - find: `/…`, previous: `N`, next: `n`
 - find replace: `:%s/…/…/g`
 - files: ` ff`, grep: ` fg`, open: ` fb`
+- diagnostics: buffer ` e`, previous `[d`, next `]d`
 - buffers: prev `⇧h`, next `⇧l`, close ` bd`, all ` b⇧d`
 - browse: ` -`, project: ` cw`
 - windows: `⌃w h/j/k/l`
