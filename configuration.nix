@@ -102,6 +102,7 @@
 
   # Programs
   programs.firefox.enable = true;
+  programs.ssh.systemd-ssh-proxy.enable = false;
   programs.zsh.enable = true;
   programs.nix-ld.enable = true;
 
