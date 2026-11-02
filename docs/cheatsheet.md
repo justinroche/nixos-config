@@ -29,6 +29,7 @@
 
 # yazi
 
+- create: `a`
 - open right: `⌃v`, below: `⌃x`, tab: `⌃t`
 - help: `F1`
 
