@@ -25,7 +25,7 @@
 
 ## buffers
 
-- prev: `H`, next: `L`, close: ` bd`, discard + close: ` bD`
+- prev: `H`, next: `L`, save + close: ` bd`, discard + close: ` bD`
 
 # yazi
 

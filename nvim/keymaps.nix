@@ -57,9 +57,9 @@
     {
       mode = "n";
       key = "<leader>bd";
-      action = "<cmd>bdelete<CR>";
+      action = "<cmd>update | bdelete<CR>";
       options = {
-        desc = "Close buffer";
+        desc = "Save and close buffer";
         silent = true;
       };
     }
