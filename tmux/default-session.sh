@@ -6,9 +6,7 @@ directory=$PWD
 session="d-$(printf '%s' "$directory" | sha256sum | cut -c 1-6)"
 
 if ! tmux has-session -t "=$session" 2>/dev/null; then
-  tmux new-session -d -s "$session" -c "$directory" -n codex codex
-  tmux split-window -d -h -t "$session:codex" -c "$directory"
-  tmux select-pane -t "$session:codex.0"
+  tmux new-session -d -s "$session" -c "$directory" -n shell
   tmux new-window -d -t "$session:" -c "$directory" -n workspace nvim .
   tmux new-window -d -t "$session:" -c "$directory" -n lazygit lazygit
 fi
