@@ -75,6 +75,7 @@
       };
       settings = {
         cursor_shape = "beam";
+        disable_ligatures = "always";
       };
     };
 
