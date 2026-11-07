@@ -8,7 +8,6 @@
     launchers = [
       "preferred://browser"
       "preferred://filemanager"
-      "applications:code.desktop"
       "applications:kitty.desktop"
     ];
     color = "#391A09";
