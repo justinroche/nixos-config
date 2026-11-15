@@ -27,6 +27,7 @@
 - diagnostics: ` e`, previous: `[d`, next `]d`
 - prev: `H`, next: `L`, save + close: ` bd`, discard + close: ` bD`
 - docs: `K`, definition: `gd`, implementations: `gi`, references: `gr`
+- accept suggestion: `⌃y`, prev: `⌃p`, next: `⌃n`
 
 # yazi
 
