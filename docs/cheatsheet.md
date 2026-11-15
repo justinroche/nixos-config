@@ -30,7 +30,7 @@
 
 # yazi
 
-- create: `a`
+- create: `a`, delete: `d`
 - open right: `⌃v`, below: `⌃x`, tab: `⌃t`
 - help: `F1`
 
