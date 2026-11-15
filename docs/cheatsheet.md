@@ -19,13 +19,14 @@
 - join next line: `J`
 - find: `/…`, previous: `N`, next: `n`
 - find replace: `:%s/…/…/g`
-- files: ` ff`, grep: ` fg`, open: ` fb`
-- diagnostics: ` e`, previous: `[d`, next `]d`
+
+## utility
+
+- find: ` ff`, grep: ` fg`, open: ` fb`
 - browse: ` -`, project: ` cw`
-
-## buffers
-
+- diagnostics: ` e`, previous: `[d`, next `]d`
 - prev: `H`, next: `L`, save + close: ` bd`, discard + close: ` bD`
+- docs: `K`, definition: `gd`, implementations: `gi`, references: `gr`
 
 # yazi
 
