@@ -1,4 +1,4 @@
-# justin-xps NixOS configuration
+# NixOS configuration for XPS 15 9500
 
 Declarative NixOS and Home Manager configuration for a Dell XPS 15 9500 with Intel/NVIDIA hybrid graphics, KDE Plasma, and a Windows dual boot.
 
