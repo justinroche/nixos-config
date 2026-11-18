@@ -1,4 +1,17 @@
 {...}: {
+  extraConfigLua = ''
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "fugitive",
+      callback = function(event)
+        vim.keymap.set("n", "q", "<cmd>diffoff! | close<CR>", {
+          buffer = event.buf,
+          desc = "Close Git diff view",
+          silent = true,
+        })
+      end,
+    })
+  '';
+
   globals.mapleader = " ";
 
   opts = {

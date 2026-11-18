@@ -28,6 +28,7 @@
 - prev: `H`, next: `L`, save + close: ` bd`, discard + close: ` bD`
 - docs: `K`, definition: `gd`, implementations: `gi`, references: `gr`
 - accept suggestion: `⌃y`, prev: `⌃p`, next: `⌃n`
+- diff: ` gd`, nav: `⌃w` + `hjkl`, quit: `q`
 
 # yazi
 

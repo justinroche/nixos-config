@@ -90,5 +90,14 @@
         silent = true;
       };
     }
+    {
+      mode = "n";
+      key = "<leader>gd";
+      action = "<cmd>Gvdiffsplit | wincmd l<CR>";
+      options = {
+        desc = "Diff current file against Git index";
+        silent = true;
+      };
+    }
   ];
 }

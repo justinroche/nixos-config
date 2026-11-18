@@ -40,6 +40,7 @@
         separator_style = "slant";
       };
     };
+    fugitive.enable = true;
     gitsigns.enable = true;
     lualine.enable = true;
     lsp = {
