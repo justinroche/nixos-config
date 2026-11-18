@@ -129,7 +129,7 @@
       autosuggestion.enable = true;
       syntaxHighlighting.enable = true;
       shellAliases = {
-        rebuild = "sudo nixos-rebuild switch --flake ~/nixos-config#justin-xps";
+        rebuild = "sudo nixos-rebuild switch --flake ~/nixos-xps#justin-xps";
       };
 
       initContent = lib.concatStringsSep "\n" [

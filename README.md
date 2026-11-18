@@ -24,7 +24,7 @@ nix flake check
 Apply the config:
 
 ```sh
-sudo nixos-rebuild switch --flake ~/nixos-config#justin-xps
+sudo nixos-rebuild switch --flake ~/nixos-xps#justin-xps
 ```
 
 Update flake inputs:
